@@ -62,100 +62,166 @@
     padding-top: 80px;
   }
   
-  header {
-    padding: 20px 4% 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.10);
-    display: flex;
-    align-items: center;
-    z-index: 1;
-  }
+header {
+  padding: 20px 4% 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.10);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
 
-  h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-  }
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
   
-  a {	
-    text-decoration: none;
-    color: #000000;
-  }
+a {	
+  text-decoration: none;
+  color: #000000;
+}
   
-  nav {
-    margin: 0 0 0 auto;
-  }
+nav {
+  margin: 0 0 0 auto;
+}
   
-  ul {
-    list-style: none;
-    margin: 0;
-    display: flex;
-    font-family: "ヒラギノ角ゴ Pro W3";
-  }
-  
-  li {
-    margin: 0 0 0 50px;
-    font-size: 16px;
-    font-family: "ヒラギノ角ゴ Pro W3";
-  }
-  
-  html {
-    background-color: #ffffff;
-  }
+ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  font-family: "ヒラギノ角ゴ Pro W3";
+}
+
+li {
+  margin: 0 0 0 50px;
+  font-size: 16px;
+  font-family: "ヒラギノ角ゴ Pro W3";
+}
+
+html {
+  background-color: #ffffff;
+}
 
 @media (max-width: 768px) {
     .header {
       display: none;
     }
-  }
-
-.font100 {
-  font-family: "sans-serif";
 }
 
-.main {
-    font-family: "HG行書体";
-    margin: 500px;
-    padding-bottom: 10px;
-    text-align: center;
-    position: relative;
-    margin: 0 0 30px 0;
-    letter-spacing: 0px;
-  }
+.menu-btn{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  color: #000000;
+}
 
+.menu{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #14ee9ae8;
+}
+.menu__item{
+  font-family: "sans-serif";
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+  height: auto;
+  padding: .5em 1em;
+  text-align: center;
+  color: #000000;
+  box-sizing: border-box;
+}
+
+.menu{
+  transform: translateX(100vw);
+  transition: all .3s linear;
+}
+
+
+.menu.is-active{
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 1279px) {
+  .menu-btn {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .menu-btn {
+    display: none;
+  }
+}
+.font100 {
+  font-family: "sans-serif";
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header {
+  display: flex;
+  background: #eeeeee;
+  height: 60px;
+}
+.main {
+  font-family: "HG行書体";
+  margin: 500px;
+  padding-bottom: 10px;
+  text-align: center;
+  position: relative;
+  margin: 0 0 30px 0;
+  letter-spacing: 0px;
+}
 
 .aaaaa {
-    background-color: #fff;
-    padding: 20px 30px 20px;
-    max-width: 570px;
-    margin: 20px auto;
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.18);
-    border-radius: 30px;
-    position: relative;
-    text-align: center;
+  background-color: #fff;
+  padding: 20px 30px 20px;
+  max-width: 570px;
+  margin: 20px auto;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.18);
+  border-radius: 30px;
+  position: relative;
+  text-align: center;
 }
 
 .profile-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
 .profile-image {
-    width: 200px; 
-    border-radius: 50%;
-    margin-bottom: 20px;
+  width: 200px; 
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 .profile-description {
-    max-width: 400px;
-    font-family: "ヒラギノ角ゴ Pro W3";
-    font-size: 16px;
+  max-width: 400px;
+  font-family: "ヒラギノ角ゴ Pro W3";
+  font-size: 16px;
 }
 
 @media (max-width: 768px) {
@@ -179,18 +245,18 @@
 }
 
 .site-footer {
-    background: rgb(255, 255, 255);
-    padding: 10px 0;
-  }
-  
-  .copyright {
-    font-family: Terminal;
-    color: rgb(0, 0, 0);
-    font-size: 12px;
-    text-align: center;
-  }
-  
-  .last {
-    color: rgb(0, 0, 0);
-    font-size: 12px;
-  }  
+  background: rgb(255, 255, 255);
+  padding: 10px 0;
+}
+
+.copyright {
+  font-family: Terminal;
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  text-align: center;
+}
+
+.last {
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+}
