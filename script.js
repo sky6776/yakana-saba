@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
                 animationContainer.style.opacity = "0";
             }, 3000);
-        }, 5000);
+        }, 3000);
     }, 0);
 });
 
