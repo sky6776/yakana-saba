@@ -1,0 +1,173 @@
+
+@media (max-width: 768px) {
+    .header {
+      display: none;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "ヒラギノ角ゴ Pro W3", sans-serif;
+    background-color: #ffffff;
+    padding-top: 80px;
+}
+
+header {
+    padding: 20px 4% 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+a {	
+    text-decoration: none;
+    color: #000000;
+}
+
+nav {
+    margin: 0 0 0 auto;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+
+li {
+    margin: 0 0 0 50px;
+    font-size: 16px;
+    font-family: "ヒラギノ角ゴ Pro W3";
+}
+
+.header {
+    display: none;
+}
+
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    color: #000000;
+    font-size: 24px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(20, 238, 154, 0.91);
+}
+
+.menu__item {
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+    height: auto;
+    padding: .5em 1em;
+    text-align: center;
+    color: #000000;
+    box-sizing: border-box;
+}
+
+.menu {
+    transform: translateX(100vw);
+    transition: all .3s linear;
+}
+
+.menu.is-active {
+    transform: translateX(0);
+}
+@media screen and (max-width: 1279px) {
+    .menu-btn {
+      display: block;
+    }
+}
+  
+  @media screen and (min-width: 1280px) {
+    .menu-btn {
+      display: none;
+    }
+}
+
+.main {
+    font-size: 20px;
+    font-family: "HG行書体";
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    letter-spacing: 0px;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid #000000;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+.site-footer {
+    background: rgb(255, 255, 255);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.copyright {
+    font-family: Terminal;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+}
+
+.last {
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+}
